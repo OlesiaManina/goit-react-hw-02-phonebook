@@ -1,4 +1,5 @@
-import css from './Filter.module.css'
+import css from './Filter.module.css';
+import PropTypes from 'prop-types';
 
 const Filter = ({value, onChange}) => (
 <label className={css.labelFilter}> Find contacts by name
@@ -7,3 +8,8 @@ const Filter = ({value, onChange}) => (
 )
 
 export default Filter;
+
+Filter.prototypes = {
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+}
